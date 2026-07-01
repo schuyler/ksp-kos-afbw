@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Reflection;
+using UnityEngine;
 using kOS.Safe.Encapsulation;
 using kOS.Safe.Encapsulation.Suffixes;
 using kOS.Suffixed;
@@ -46,7 +47,11 @@ namespace kOS.AddOns.AFBW
                 .SelectMany(a => { try { return a.assembly.GetTypes(); } catch { return Type.EmptyTypes; } })
                 .FirstOrDefault(t => t.FullName == "KSPAdvancedFlyByWire.AdvancedFlyByWire");
 
-            if (_afbwType == null) return;
+            if (_afbwType == null)
+            {
+                Debug.Log("[kOS-AFBW] AdvancedFlyByWire type not found; addon unavailable");
+                return;
+            }
 
             _disabledField = _afbwType.GetField("rightClickDisabled",
                 BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public);
