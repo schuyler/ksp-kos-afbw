@@ -9,6 +9,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <KSPDIR Condition=" '$(KSPDIR)' == '' ">$(HOME)/Library/Application Support/Steam/steamapps/common/Kerbal Space Program</KSPDIR>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,31 +31,31 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
-      <HintPath>$(HOME)/ksp/KSP_Data/Managed/Assembly-CSharp.dll</HintPath>
+      <HintPath>$(KSPDIR)/KSP.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>$(HOME)/ksp/KSP_Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>$(KSPDIR)/KSP.app/Contents/Resources/Data/Managed/UnityEngine.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>$(HOME)/ksp/KSP_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(KSPDIR)/KSP.app/Contents/Resources/Data/Managed/UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="kOS">
-      <HintPath>$(HOME)/ksp/GameData/kOS/Plugins/kOS.dll</HintPath>
+      <HintPath>$(KSPDIR)/GameData/kOS/Plugins/kOS.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="kOS.Safe">
-      <HintPath>$(HOME)/ksp/GameData/kOS/Plugins/kOS.Safe.dll</HintPath>
+      <HintPath>$(KSPDIR)/GameData/kOS/Plugins/kOS.Safe.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="ToolbarControl">
-      <HintPath>$(HOME)/ksp/GameData/kOS/Plugins/ToolbarControl.dll</HintPath>
+      <HintPath>$(KSPDIR)/GameData/001_ToolbarControl/Plugins/ToolbarControl.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="AdvancedFlyByWire">
-      <HintPath>$(HOME)/ksp/GameData/ksp-advanced-flybywire/Plugins/AdvancedFlyByWire.dll</HintPath>
+      <HintPath>$(KSPDIR)/GameData/ksp-advanced-flybywire/Plugins/AdvancedFlyByWire.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
