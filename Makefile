@@ -2,7 +2,7 @@ KSPDIR  ?= $(HOME)/Library/Application Support/Steam/steamapps/common/Kerbal Spa
 MANAGED  = $(KSPDIR)/KSP.app/Contents/Resources/Data/Managed
 GAMEDATA = $(KSPDIR)/GameData
 
-VERSION  = 0.1.0
+VERSION = 0.1.1
 ZIPNAME  = kOS-AFBW-v$(VERSION).zip
 OUTDIR   = bin/Debug
 DLL      = $(OUTDIR)/kOS-AFBW.dll
