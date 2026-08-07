@@ -1,6 +1,6 @@
 spec_version: v1.4
 identifier: kOS-AFBW
-$kref: '#/ckan/github/schuyler/ksp-kos-afbw'
+$kref: '#/ckan/github/schuyler/kOS-AFBW'
 $vref: '#/ckan/ksp-avc'
 name: kOS-AFBW
 abstract: Bridge mod exposing AFBW's enable/disable toggle to kOS scripts.
@@ -10,7 +10,7 @@ tags:
   - plugin
   - control
 resources:
-  repository: https://github.com/schuyler/ksp-kos-afbw
+  repository: https://github.com/schuyler/kOS-AFBW
 depends:
   - name: kOS
   - name: AdvancedFlyByWire
